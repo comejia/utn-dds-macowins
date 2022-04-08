@@ -1,6 +1,6 @@
 # Macowins
 
-Requerimientos:
+Requerimientos del ejercicio [Macowins](/assets/Ejercicio_Macowins.pdf):
 * Calculo del precio de una prenda
 * Registrar venta de prendas
 * Determinar la ganancia del dia
