@@ -7,6 +7,6 @@ Requerimientos:
 
 A continuacion se presenta una solucion utilizando el diagrama de clases
 
-<img src="/assets/uml_macowins.png" alt="Diagrama de clases"/>
+![Diagrama de clases](/assets/uml_macowins.png)
 
-*Nota: nose hace ninguna aclaracion a como se implementan los metodos (quedara para una futura implementacion)*
+*Nota: no se hace ninguna aclaracion a como se implementan los metodos (quedara para una futura implementacion)*
