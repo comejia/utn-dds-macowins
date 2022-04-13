@@ -16,7 +16,7 @@ public class VentaConTarjeta extends Venta {
     }
 
     @Override
-    public Integer recargo() {
-        return ((Double)(this.cantidadCuotas * this.coeficienteTarjeta + 0.01 * importeDeItems())).intValue();
+    public Integer recargo(Integer importeBase) {
+        return ((Double)(this.cantidadCuotas * this.coeficienteTarjeta + 0.01 * importeBase)).intValue();
     }
 }

@@ -6,22 +6,23 @@ import java.util.Date;
 import java.util.List;
 
 public abstract class Venta {
-    private List<Item> items;
-    private Date fecha;
+    private final List<Item> items;
+    private final Date fecha;
 
     public Venta(List<Item> items, Date fecha) {
         this.items = items;
         this.fecha = fecha;
     }
 
-    public abstract Integer recargo();
+    public abstract Integer recargo(Integer importeBase); // es lo mismo si en vez de pasar "importeBase" las subclases acceden a precioDeItems()
 
     public Integer importe() {
-        return importeDeItems() + recargo();
+        Integer importeBase = precioDeItems();
+        return importeBase + recargo(importeBase);
     }
 
-    public Integer importeDeItems() {
-        return items.stream().mapToInt(Item::importe).sum();
+    public Integer precioDeItems() {
+        return this.items.stream().mapToInt(Item::importe).sum();
     }
 
     public boolean esDeFecha(Date fecha) {

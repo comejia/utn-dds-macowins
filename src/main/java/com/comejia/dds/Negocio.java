@@ -1,6 +1,7 @@
 package com.comejia.dds;
 
 import com.comejia.dds.producto.Prenda;
+import com.comejia.dds.tipo_prenda.Tipo;
 import com.comejia.dds.venta.Venta;
 
 import java.util.ArrayList;
@@ -13,6 +14,10 @@ public class Negocio {
 
     public Integer precioDePrenda(Prenda prenda) {
         return prenda.precio();
+    }
+
+    public Tipo tipoDePrenda(Prenda prenda) {
+        return prenda.getTipo();
     }
 
     public void registrarVenta(Venta venta) {

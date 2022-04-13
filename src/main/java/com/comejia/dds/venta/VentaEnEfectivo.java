@@ -12,7 +12,7 @@ public class VentaEnEfectivo extends Venta {
     }
 
     @Override
-    public Integer recargo() {
+    public Integer recargo(Integer importeBase) {
         return 0;
     }
 }
