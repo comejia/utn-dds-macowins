@@ -1,4 +1,7 @@
 package com.comejia.dds.tipo_prenda;
 
-public interface Tipo {
+public enum Tipo {
+    SACO,
+    PANTALON,
+    CAMISA
 }
