@@ -1,9 +1,9 @@
 package com.comejia.dds.estado_prenda;
 
-public class Nueva implements Estado {
+public class Nueva implements EstadoPrenda {
 
     @Override
-    public Integer precioFinal(Integer precioBase) {
+    public Double precioFinal(Double precioBase) {
         return precioBase;
     }
 }

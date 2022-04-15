@@ -1,9 +1,9 @@
 package com.comejia.dds.estado_prenda;
 
-public class Liquidacion implements Estado {
+public class Liquidacion implements EstadoPrenda {
 
     @Override
-    public Integer precioFinal(Integer precioBase) {
-        return precioBase / 2;
+    public Double precioFinal(Double precioBase) {
+        return precioBase * 0.5;
     }
 }

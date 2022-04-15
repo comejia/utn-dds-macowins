@@ -14,15 +14,15 @@ public abstract class Venta {
         this.fecha = fecha;
     }
 
-    public abstract Integer recargo(Integer importeBase); // es lo mismo si en vez de pasar "importeBase" las subclases acceden a precioDeItems()
+    public abstract Double recargo(Double importeBase); // es lo mismo si en vez de pasar "importeBase" las subclases acceden a precioDeItems()
 
-    public Integer importe() {
-        Integer importeBase = precioDeItems();
+    public Double importe() {
+        Double importeBase = precioDeItems();
         return importeBase + recargo(importeBase);
     }
 
-    public Integer precioDeItems() {
-        return this.items.stream().mapToInt(Item::importe).sum();
+    public Double precioDeItems() {
+        return this.items.stream().mapToDouble(Item::importe).sum();
     }
 
     public boolean esDeFecha(Date fecha) {

@@ -7,16 +7,16 @@ import java.util.List;
 
 public class VentaConTarjeta extends Venta {
 
-    private final Integer cantidadCuotas;
+    private final Double cantidadCuotas;
     private final Double coeficienteTarjeta = 0.8;
 
-    public VentaConTarjeta(List<Item> items, Date fecha, Integer cuotas) {
+    public VentaConTarjeta(List<Item> items, Date fecha, Double cuotas) {
         super(items, fecha);
         this.cantidadCuotas = cuotas;
     }
 
     @Override
-    public Integer recargo(Integer importeBase) {
-        return ((Double)(this.cantidadCuotas * this.coeficienteTarjeta + 0.01 * importeBase)).intValue();
+    public Double recargo(Double importeBase) {
+        return this.cantidadCuotas * this.coeficienteTarjeta + 0.01 * importeBase;
     }
 }

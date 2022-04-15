@@ -1,15 +1,15 @@
 package com.comejia.dds.estado_prenda;
 
-public class Promocion implements Estado {
+public class Promocion implements EstadoPrenda {
 
-    private final Integer descuento;
+    private final Double descuento;
 
-    public Promocion(Integer descuento) {
+    public Promocion(Double descuento) {
         this.descuento = descuento;
     }
 
     @Override
-    public Integer precioFinal(Integer precioBase) {
-        return precioBase - this.descuento;
+    public Double precioFinal(Double precioBase) {
+        return Math.max(precioBase - this.descuento, 0.0);
     }
 }

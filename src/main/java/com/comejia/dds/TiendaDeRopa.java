@@ -15,14 +15,14 @@ public class TiendaDeRopa {
         this.ventas.add(venta);
     }
 
-    public Integer gananciaDeUnDia(Date fecha) {
+    public Double gananciaDeUnDia(Date fecha) {
         return ventasDeUnDia(fecha)
                 .stream()
-                .mapToInt(Venta::importe)
+                .mapToDouble(Venta::importe)
                 .sum();
     }
 
-    private List<Venta> ventasDeUnDia(Date fecha) {
+    public List<Venta> ventasDeUnDia(Date fecha) {
         return this.ventas.stream()
                 .filter(venta -> venta.esDeFecha(fecha))
                 .collect(Collectors.toList());

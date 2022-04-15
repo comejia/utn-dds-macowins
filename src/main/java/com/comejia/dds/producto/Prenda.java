@@ -1,29 +1,29 @@
 package com.comejia.dds.producto;
 
-import com.comejia.dds.estado_prenda.Estado;
-import com.comejia.dds.tipo_prenda.Tipo;
+import com.comejia.dds.estado_prenda.EstadoPrenda;
+import com.comejia.dds.tipo_prenda.TipoPrenda;
 
 public class Prenda {
 
-    private final Integer precioBase;
-    private Estado estado;
-    private final Tipo tipo;
+    private final Double precioBase;
+    private EstadoPrenda estadoPrenda;
+    private final TipoPrenda tipoPrenda;
 
-    public Prenda(Integer precioBase, Estado estado, Tipo tipo) {
+    public Prenda(Double precioBase, EstadoPrenda estadoPrenda, TipoPrenda tipoPrenda) {
         this.precioBase = precioBase;
-        this.estado = estado;
-        this.tipo = tipo;
+        this.estadoPrenda = estadoPrenda;
+        this.tipoPrenda = tipoPrenda;
     }
 
-    public Integer precio() {
-        return estado.precioFinal(precioBase);
+    public Double precio() {
+        return estadoPrenda.precioFinal(precioBase);
     }
 
-    public Tipo getTipo() {
-        return tipo;
+    public TipoPrenda tipoDePrenda() {
+        return tipoPrenda;
     }
 
-    public void cambiarEstado(Estado estado) {
-        this.estado = estado;
+    public void cambiarEstado(EstadoPrenda estadoPrenda) {
+        this.estadoPrenda = estadoPrenda;
     }
 }

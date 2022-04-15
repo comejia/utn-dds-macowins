@@ -1,6 +1,6 @@
 package com.comejia.dds.tipo_prenda;
 
-public enum Tipo {
+public enum TipoPrenda {
     SACO,
     PANTALON,
     CAMISA

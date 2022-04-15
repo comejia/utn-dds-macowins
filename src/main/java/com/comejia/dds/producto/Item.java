@@ -2,14 +2,14 @@ package com.comejia.dds.producto;
 
 public class Item {
     private final Prenda prenda;
-    private final Integer cantidad;
+    private final Double cantidad;
 
-    public Item(Prenda prenda, Integer cantidad) {
+    public Item(Prenda prenda, Double cantidad) {
         this.prenda = prenda;
         this.cantidad = cantidad;
     }
 
-    public Integer importe() {
+    public Double importe() {
         return this.prenda.precio() * this.cantidad;
     }
 }
